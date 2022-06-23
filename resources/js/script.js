@@ -1,13 +1,16 @@
+
+function callAlert(){
+    location.href = "alert.html"
+}
+
 function EmitirSenha(sufixo_atendimento) {
 
     //localStorage.setItem("senha", bot.value)
     //alert(bot.value)
-
     const endPoint = 'https://central-atendimento-cliente.herokuapp.com/api/';
     const route = 'atendimento/post';
     const cpf = document.getElementById("campo-texto").value;
     const date = '?' + 'cpf=' + cpf + '&' + 'sufixo_atendimento=' + sufixo_atendimento;
-
 
     const initDetails = {
         method: 'post',
@@ -39,7 +42,6 @@ function EmitirSenha(sufixo_atendimento) {
         {
             console.log( 'Fetch Error :-S', err );
         } );
-
 }
 
 
