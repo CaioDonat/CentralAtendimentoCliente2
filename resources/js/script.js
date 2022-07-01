@@ -3,23 +3,23 @@ function navbar(){
     nav.innerHTML = " "
   
     nav.innerHTML += `<li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="../index.html" role="tab" aria-controls="home" aria-selected="true">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="../home.html" role="tab" aria-controls="home" aria-selected="true">
       <img src="https://senaies.com.br/wp-content/uploads/2019/11/logo_senai_novo.svg" alt="Senai - ES" class="logo-img" style="height: 32px"></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="views/atendimento.html" role="tab" aria-controls="profile"
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="atendimento.html" role="tab" aria-controls="profile"
       aria-selected="false">Atendimento</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/monitor.html" role="tab" aria-controls="contact"
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="monitor.html" role="tab" aria-controls="contact"
       aria-selected="false">Monitor</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/triagem.html" role="tab" aria-controls="contact"
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="triagem.html" role="tab" aria-controls="contact"
       aria-selected="false">Triagem</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/configuracao.html" role="tab" aria-controls="contact"
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="configuracao.html" role="tab" aria-controls="contact"
       aria-selected="false">Configuracao</a>
   </li>`
   }
@@ -41,11 +41,11 @@ function setGuiche(){
 
 
 function chamarTela(){
-    location.href = "atdandamento.html"
+    location.href = "chamadoatd.html"
 }
 
  function iniciarAtendimento(){
-    location.href = "iniciaratendimento.html"
+    location.href = "iniciadoatd.html"
 }
 
 function encerrarAtendimento(){
@@ -314,6 +314,19 @@ function getNext(){
 
 
  
-function chamarSenha(){
+function addAtributos(){
+    add = document.getElementById("addRequisitos"); 
+    add.innerHTML = " "
 
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue_next`
+    fetch(uri).then(r => r.json().then(r => {
+
+            console.log(r)
+            add.innerHTML += `<label>CPF: </label>`
+            add.innerHTML += `<input type="text" class="form-control" placeholder="CPF: ${r.cpf}">`
+            add.innerHTML += `<label>Observacoes: </label>`
+            add.innerHTML += `<input type="text" class="form-control" placeholder="Observacoes: ${r.observacoes}">`
+            add.innerHTML += `<button type="button" class="btn mt-1 btn-success">Enviar</button>`
+            
+    }))
 }

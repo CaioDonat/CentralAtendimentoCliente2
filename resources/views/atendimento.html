@@ -19,7 +19,7 @@
     </script>
 </head>
 
-<body class="container" onload="getProximos()">
+<body class="container" onload="getProximos(); navbar()">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
   </ul>
   <div>
@@ -31,15 +31,8 @@
 
         <div class="boxG p-2">
           <h5>Guichê</h5>
-          <h1 class="numero" id="guiche"></h1>
+          <h1 class="numero" id="guiche">2</h1>
           <div class="alterar-box">
-          <select class="form-control" id="guicheId">
-            <option value="0">Alterar:</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <button type="button" class="btn btn-dark btn-sm" onclick="setGuiche()">Ok</button>
           </div>
 
         </div>
