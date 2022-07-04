@@ -102,5 +102,26 @@ function teste(){
     }
 
     function diaHora(){
+        data = document.getElementById("data")
         
+        now = new Date
+        document.write ("Hoje é " + now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear() )
+
+        data = now
     }
+    
+    function time(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+document.getElementById('hora').innerHTML=h+":"+m;
+
+let data = new Date();
+let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear(); 
+console.log(dataFormatada);
+document.getElementById("data").innerHTML = dataFormatada
+
+
+
+}

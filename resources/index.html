@@ -11,11 +11,11 @@
 
     <script src="js/script.js"></script>
 
-    <body onload="teste()">
+    <body onload="teste(); time(); data()">
 
         <div>
             <header class="cabecalho">    
-            <img class="cabecalho-img" src="/img/logo_senai_branco.png" alt="logo_senai">
+            <img class="cabecalho-img" src="/resources/img/logo_senai_branco.png" alt="logo_senai">
             </header>
         <main>
             <section class="senha-guiche">
@@ -27,12 +27,17 @@
                 <a id="senhaAtual" class="senhaTelao">M-08</a>
                 <a class="guicheTelao" id="nmrGuiche">02</a>
             </section>
+            <div>
+                <h1 class="hora" id="hora"></h1>
+                <h1 class="data" id="data"></h1>
             <table class="primeiro-numero" id="primeiroFila">
                 <tr>
                     <th class="tabela-1">SENHAS ANTERIORES</th>
                     <th class="tabela-1"onclick="callNext()">GUICHÊ</strong></th> 
+                    <h1 id="data"></h1>
                 </tr>
             </table>
+        </div>
             </div>
             </main>
         </div>

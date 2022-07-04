@@ -143,4 +143,18 @@ body{
      animation: piscarNumero .3s 30;
  }
 
+ h1.hora{
+    position: absolute;
+    padding-left: 86%;
+    padding-top: 5%;
+ }
+
+ h1.data{
+    position: absolute;
+    padding-left: 82%;
+    padding-top: 1%;
+ }
+
+ 
+
  
