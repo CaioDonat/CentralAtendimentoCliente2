@@ -19,7 +19,7 @@
     <title>Financeiro</title>
 </head>
 
-<body class="container">
+<body class="container" onload="servicoFinanceiro()">
 
     <div class="senai-logo">
 
@@ -39,26 +39,16 @@
         <br>
         <div class="box">
 
+            <div id="opcoesFcr">
             <div class="box-opt">
-                <label for="opt1">
-                    <input type="checkbox" value="opcao1" name="opt" id="opt1">
+                <label for="opt1" id="servico">
+                    <input type="checkbox" value="opcao1" name="opt" id="">
                     Pagamento de Boleto
                 </label>
             </div>
+             </div>
 
-            <div class="box-opt">
-                <label for="opt2">
-                    <input type="checkbox" value="opcao2" name="opt" id="opt2">
-                    Imposto de Renda
-                </label>
-            </div>
-
-            <div class="box-opt">
-                <label for="opt3">
-                    <input type="checkbox" value="opcao3" name="opt" id="opt3">
-                    Reembolso
-                </label>
-            </div>
+            
 
 
             <!-- <div class="box-btns"> -->

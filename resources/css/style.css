@@ -258,3 +258,16 @@ justify-content: center;
 align-content: center;
 margin-bottom: 3rem;
 }
+
+
+ul.boxlist{
+  display: inline-block;
+  height: 60px;
+  padding: 5px 5px 5px;
+  box-sizing: border-box;
+  border: 1px solid outset;
+  border-color: rgb(93, 169, 255);
+  background: linear-gradient(#005CA8, rgba(43, 89, 214, 0.767));
+  margin: 5px 5px;
+  border-radius: 8px;
+}
