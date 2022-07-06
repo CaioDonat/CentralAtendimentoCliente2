@@ -3,24 +3,27 @@ function callAlert(){
     location.href = "alert.html"
 }
 
-function EmitirSenha(sufixo_atendimento) {
+function EmitirSenha(servicos) {
 
     //localStorage.setItem("senha", bot.value)
     //alert(bot.value)
-    const endPoint = 'https://central-atendimento-cliente.herokuapp.com/api/';
-    const route = 'atendimento/post';
-    const cpf = document.getElementById("campo-texto").value;
-    const date = '?' + 'cpf=' + cpf + '&' + 'sufixo_atendimento=' + sufixo_atendimento;
+    const endPoint = 'http://127.0.0.1:8000/api/';
+    const route = 'atendimento/post/';
+    //const cpf = document.getElementById("servicos").value;
+    //const date = '?' + 'cpf=' + cpf + '&' + 'servicos=' + servicos;
 
     const initDetails = {
         method: 'post',
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
-        mode: "cors"
+        mode: "cors",
+        body: JSON.stringify({
+            servicos: servicos
+        }),
     }
     
-    fetch((endPoint + route + date), initDetails )
+    fetch((endPoint + route), initDetails )
         .then( response =>
         {
             if ( response.status !== 200 )
@@ -99,12 +102,14 @@ function servicoFinanceiro(){
     fetch(uri).then(r => r.json().then(r =>{
         r.forEach(r1 => {
 
-            servicos.innerHTML += ` <div class="box-opt">
-            <label for="opt1" id="">
-                <input type="checkbox" value="opcao1" name="opt" id="">
-                ${r1.servico}
-            </label>
-        </div> `
+            servicos.innerHTML += `
+                <div class="box-opt">
+                    <label for="opt1" id="">
+                        <input type="checkbox" class="messageCheckbox" value="${r1.id_servicos}" name="opt" id="">
+                        ${r1.servico}
+                    </label>
+                </div>
+            `
             console.log(r1.servico)
         });
     }))
@@ -169,4 +174,4 @@ function servicoOutrosServicos(){
         });
     }))
 
-} 
+}

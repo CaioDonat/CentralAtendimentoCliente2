@@ -12,6 +12,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="../js/script.js"></script>
+    <script>
+        function optionsChecked(){
+
+            var checkedValue = null; 
+            var inputElements = document.getElementsByClassName('messageCheckbox');
+                for(var i=0; inputElements[i]; ++i){
+                    console.log(
+                        inputElements[i].value
+                        + " opcoesFcr");
+
+                    if(inputElements[i].checked){
+                        checkedValue = inputElements[i].value;
+                        break;
+                    }
+                }
+            return checkedValue; 
+        }
+    </script>
 
     <link rel="stylesheet" href="../css/style.css">
 
@@ -40,17 +58,10 @@
         <div class="box">
 
             <div id="opcoesFcr">
-            <div class="box-opt">
-                <label for="opt1" id="servico">
-                    <input type="checkbox" value="opcao1" name="opt" id="">
-                    Pagamento de Boleto
-                </label>
+            <div class="qwe">
+                <!-- innerHTML.options -->
             </div>
              </div>
-
-            
-
-
             <!-- <div class="box-btns"> -->
            <!-- <button class="btn btn-primary" id="emitir-senha" onclick="callAlert()">teste</button> -->
             <!-- </div> -->
@@ -60,7 +71,13 @@
 
     <input type="text" id="campo-texto" class="field_cpf" placeholder="CPF (Opcional)" aria-label="Search"
         aria-describedby="search-addon" />
-    <button id='getData' class="btn-emitirsenha" onclick="EmitirSenha('FCR'); callAlert();">Emitir Senha</button>
+    <button id='getData' class="btn-emitirsenha" onclick="
+    EmitirSenha(
+        //document.getElementById(campo-texto),
+        optionsChecked()
+
+    );
+    ">Emitir Senha</button>
     </div>
 </body>
 
