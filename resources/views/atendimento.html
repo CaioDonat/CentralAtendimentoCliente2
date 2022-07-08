@@ -17,32 +17,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-     <script src="/resources/js/script.js"></script>
 </head>
 
-<body class="container" onload="getProximos()">
+<body class="container" onload="getProximos(); navbar()">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="/index.html" role="tab" aria-controls="home"
-        aria-selected="true"><img src="https://senaies.com.br/wp-content/uploads/2019/11/logo_senai_novo.svg"
-          alt="Senai - ES" class="logo-img" style="height: 32px"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="/views/atendimento.html" role="tab" aria-controls="profile"
-        aria-selected="false">Atendimento</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="/views/monitor.html" role="tab" aria-controls="contact"
-        aria-selected="false">Monitor</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="/views/triagem.html" role="tab" aria-controls="contact"
-        aria-selected="false">Triagem</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="/views/configuracao.html" role="tab" aria-controls="contact"
-        aria-selected="false">Configuracao</a>
-    </li>
   </ul>
   <div>
     <h3 class=" mt-5">ATENDIMENTO</h3>
@@ -53,15 +31,8 @@
 
         <div class="boxG p-2">
           <h5>Guichê</h5>
-          <h1 class="numero" id="guiche"></h1>
+          <h1 class="numero" id="guiche">2</h1>
           <div class="alterar-box">
-          <select class="form-control" id="guicheId">
-            <option value="0">Alterar:</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <button type="button" class="btn btn-dark btn-sm" onclick="setGuiche()">Ok</button>
           </div>
 
         </div>
@@ -81,7 +52,6 @@
     </div>
 
   </div>
-  <script src="/js/script.js"></script>
 </body>
-
+<script src="/js/script.js"></script>
 </html>

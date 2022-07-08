@@ -1,0 +1,9 @@
+{
+    "navbar":[
+        {
+            "action": "Atendimento",
+            "link": "loadPage('/views/atendimento.html')",
+            "class": ""
+        }
+    ]
+}
