@@ -15,7 +15,7 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install php8.1
 
-sudo apt install vim git curl
+sudo apt install vim git curl php-curl php-xml php-mbstring php-mysql
 
 function nodejs(){
 echo "instalando nodejs";

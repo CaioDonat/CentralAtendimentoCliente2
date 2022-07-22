@@ -10,14 +10,15 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('tb_employees', function (Blueprint $table) {
             $table->increments('id_employee');
+            $table->unsignedInteger('name_token'); //FK
             $table->string('name')->nullable();
             $table->string('login')->nullable();
             $table->string('password')->nullable();
             $table->boolean('contract_active')->default(true);
         });
-        /*
+        /*Procurar tabela
         Schema::create('tb_employees', function (Blueprint $table) {
-            $table->foreign('id_token_employee')->references('token')->on('tb_tokens');
+            $table->foreign('name_token')->references('token')->on('tb_personal_access_tokens');
         });
         */
     }

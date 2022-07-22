@@ -27,12 +27,12 @@ class CreateAtendimentosTable extends Migration
             $table->dateTime('finished')->nullable();
             $table->enum('status_atendimento', ['chamando', 'aguardando', 'em_atendimento', 'nao_compareceu', 'nao_concluido', 'concluido'])->nullable();
         });
-        /*
+        
         Schema::table('tb_atendimentos', function (Blueprint $table) {
             $table->foreign('id_service_desk')->references('id_service_desk')->on('tb_service_desks');
             $table->foreign('servicos')->references('id_servicos')->on('tb_servicos');
         });
-        */
+        
     }
 
     public function down()

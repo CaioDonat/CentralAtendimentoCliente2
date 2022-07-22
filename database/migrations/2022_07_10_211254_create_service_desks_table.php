@@ -15,11 +15,10 @@ class CreateServiceDesksTable extends Migration
             $table->dateTime('opening');
             $table->dateTime('closing')->nullable();
         });
-        /*
-        Schema::table('service_desks', function (Blueprint $table) {
+
+        Schema::table('tb_service_desks', function (Blueprint $table) {
             $table->foreign('id_employee')->references('id_employee')->on('tb_employees');
         });
-        */
     }
 
     public function down()
